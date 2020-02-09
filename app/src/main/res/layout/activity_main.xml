@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    tools:context=".MainActivity"
+    >
+
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_light"
+        android:text="Wanna hear a joke?"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Button"
+        android:background="@android:color/holo_green_light"
+
+        android:text="YES"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/Button"
+        app:layout_constraintTop_toBottomOf="@+id/Button" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Button"
+        android:layout_toRightOf="@+id/yes"
+
+        android:background="@android:color/holo_red_light"
+        android:text="NO"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/yes"
+        app:layout_constraintTop_toBottomOf="@+id/Button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="174dp"
+        android:layout_height="154dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/hqdefault" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:layout_below="@+id/yes"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:fontFamily="cursive"
+
+                android:textAlignment="center"
+                android:textSize="50sp" />
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>
